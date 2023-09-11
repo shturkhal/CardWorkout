@@ -18,7 +18,11 @@ class CardSelectionVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        stopButton.layer.cornerRadius = 8
+        restartButton.layer.cornerRadius = 8
+        rulesButton.layer.cornerRadius = 8
+        
     }
     //MARK: Actions
     
