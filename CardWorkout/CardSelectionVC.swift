@@ -12,23 +12,30 @@ class CardSelectionVC: UIViewController {
     //MARK: Outlets
     
     @IBOutlet var cardImageView: UIImageView!
-    @IBOutlet var stopButton: UIButton!
-    @IBOutlet var restartButton: UIButton!
-    @IBOutlet var rulesButton: UIButton!
+  // create array of buttons with drag one and create collection, then drag buttons to array
+    @IBOutlet var buttons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        stopButton.layer.cornerRadius = 8
-        restartButton.layer.cornerRadius = 8
-        rulesButton.layer.cornerRadius = 8
+        setUpCornerRadiusForButtons()
         
     }
+    //MARK: Functions
+    func setUpCornerRadiusForButtons() {
+        for button in buttons {
+            button.layer.cornerRadius = 8
+        }
+    }
+    
+    
     //MARK: Actions
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
     }
     
-   
-
+    @IBAction func restartButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func rulesButtonTapped(_ sender: UIButton) {
+    }
 }
