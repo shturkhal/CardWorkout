@@ -35,6 +35,9 @@
                                 <state key="normal" title="Stop!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="Wje-Ns-dSs" eventType="touchUpInside" id="9MO-ue-9A6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj4-St-7zn">
                                 <rect key="frame" x="66.666666666666671" y="631" width="115.00000000000001" height="50"/>
@@ -76,6 +79,12 @@
                             <constraint firstItem="oj4-St-7zn" firstAttribute="leading" secondItem="bEk-YR-SMS" secondAttribute="leading" id="zMO-NR-raP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="qS3-nw-Yp9" id="0Xz-mi-rgU"/>
+                        <outlet property="restartButton" destination="oj4-St-7zn" id="SGp-hY-mbb"/>
+                        <outlet property="rulesButton" destination="hhh-NH-PwL" id="Ckf-Q9-ZKT"/>
+                        <outlet property="stopButton" destination="bEk-YR-SMS" id="ZtO-p5-lKc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lv6-oA-gah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
