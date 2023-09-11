@@ -23,12 +23,57 @@
                                     <constraint firstAttribute="width" constant="250" id="WCh-Qh-Mhc"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-YR-SMS">
+                                <rect key="frame" x="66.666666666666686" y="561" width="260" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eLG-kd-GdF"/>
+                                    <constraint firstAttribute="width" constant="260" id="v0m-Di-xaC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Stop!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj4-St-7zn">
+                                <rect key="frame" x="66.666666666666671" y="631" width="115.00000000000001" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Md-3k-ahx"/>
+                                    <constraint firstAttribute="width" constant="115" id="Uau-NP-5dw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-NH-PwL">
+                                <rect key="frame" x="211.66666666666663" y="631" width="115" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="17j-Yg-PhY"/>
+                                    <constraint firstAttribute="width" constant="115" id="jbP-LZ-rsL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Rules">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c1d-kM-Nsb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hhh-NH-PwL" firstAttribute="centerY" secondItem="oj4-St-7zn" secondAttribute="centerY" id="95D-MG-jWw"/>
                             <constraint firstItem="qS3-nw-Yp9" firstAttribute="centerY" secondItem="as7-8w-Wep" secondAttribute="centerY" constant="-100" id="Gsf-y5-Ofx"/>
+                            <constraint firstItem="hhh-NH-PwL" firstAttribute="trailing" secondItem="bEk-YR-SMS" secondAttribute="trailing" id="MPC-Oy-NeK"/>
+                            <constraint firstItem="bEk-YR-SMS" firstAttribute="centerX" secondItem="as7-8w-Wep" secondAttribute="centerX" id="ObJ-O4-58g"/>
+                            <constraint firstItem="oj4-St-7zn" firstAttribute="top" secondItem="bEk-YR-SMS" secondAttribute="bottom" constant="20" id="WLb-RG-ubv"/>
+                            <constraint firstItem="bEk-YR-SMS" firstAttribute="top" secondItem="qS3-nw-Yp9" secondAttribute="bottom" constant="60" id="p6S-H4-mUM"/>
                             <constraint firstItem="qS3-nw-Yp9" firstAttribute="centerX" secondItem="as7-8w-Wep" secondAttribute="centerX" id="wf7-a1-cT7"/>
+                            <constraint firstItem="oj4-St-7zn" firstAttribute="leading" secondItem="bEk-YR-SMS" secondAttribute="leading" id="zMO-NR-raP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -41,6 +86,15 @@
         <image name="10_of_clubs" width="500" height="726"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
