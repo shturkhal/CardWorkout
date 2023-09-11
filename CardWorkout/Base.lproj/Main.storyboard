@@ -25,7 +25,6 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEk-YR-SMS">
                                 <rect key="frame" x="66.666666666666686" y="561" width="260" height="50"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eLG-kd-GdF"/>
                                     <constraint firstAttribute="width" constant="260" id="v0m-Di-xaC"/>
@@ -35,13 +34,17 @@
                                 <state key="normal" title="Stop!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <buttonConfiguration key="configuration" style="tinted" image="stop.circle" catalog="system" title="Stop!" imagePadding="4" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="stopButtonTapped:" destination="Wje-Ns-dSs" eventType="touchUpInside" id="9MO-ue-9A6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj4-St-7zn">
                                 <rect key="frame" x="66.666666666666671" y="631" width="115.00000000000001" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9Md-3k-ahx"/>
                                     <constraint firstAttribute="width" constant="115" id="Uau-NP-5dw"/>
@@ -51,13 +54,17 @@
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <buttonConfiguration key="configuration" style="tinted" image="autostartstop.trianglebadge.exclamationmark" catalog="system" title="Restart" imagePadding="4" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="restartButtonTapped:" destination="Wje-Ns-dSs" eventType="touchUpInside" id="QGP-ep-P28"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-NH-PwL">
                                 <rect key="frame" x="211.66666666666663" y="631" width="115" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="17j-Yg-PhY"/>
                                     <constraint firstAttribute="width" constant="115" id="jbP-LZ-rsL"/>
@@ -67,6 +74,11 @@
                                 <state key="normal" title="Rules">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <buttonConfiguration key="configuration" style="tinted" image="text.book.closed" catalog="system" title="Rules" imagePadding="4" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="EHK-y4-W0V" kind="presentation" id="0DT-0K-0o6"/>
                                 </connections>
@@ -87,9 +99,6 @@
                     </view>
                     <connections>
                         <outlet property="cardImageView" destination="qS3-nw-Yp9" id="0Xz-mi-rgU"/>
-                        <outletCollection property="buttons" destination="bEk-YR-SMS" collectionClass="NSMutableArray" id="NTW-Yy-2Nu"/>
-                        <outletCollection property="buttons" destination="oj4-St-7zn" collectionClass="NSMutableArray" id="OcH-6r-US8"/>
-                        <outletCollection property="buttons" destination="hhh-NH-PwL" collectionClass="NSMutableArray" id="GWD-RJ-qNx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lv6-oA-gah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,6 +166,9 @@ J = 11, Q =12, K = 13, A =14</string>
     </scenes>
     <resources>
         <image name="10_of_clubs" width="500" height="726"/>
+        <image name="autostartstop.trianglebadge.exclamationmark" catalog="system" width="128" height="125"/>
+        <image name="stop.circle" catalog="system" width="128" height="123"/>
+        <image name="text.book.closed" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

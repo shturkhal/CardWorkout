@@ -12,14 +12,14 @@ class CardSelectionVC: UIViewController {
     
     @IBOutlet var cardImageView: UIImageView!
   // create array of buttons with drag one and create collection, then drag buttons to array
-    @IBOutlet var buttons: [UIButton]!
+//    @IBOutlet var buttons: [UIButton]!
     var timer: Timer!
     var cards: [UIImage] = Card.allValues
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startTimer()
-        setUpCornerRadiusForButtons()
+//        setUpCornerRadiusForButtons()
         
     }
     
@@ -28,11 +28,11 @@ class CardSelectionVC: UIViewController {
         timer.invalidate()
     }
     //MARK: Functions
-    func setUpCornerRadiusForButtons() {
-        for button in buttons {
-            button.layer.cornerRadius = 8
-        }
-    }
+//    func setUpCornerRadiusForButtons() {
+//        for button in buttons {
+//            button.layer.cornerRadius = 8
+//        }
+//    }
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomImage), userInfo: nil, repeats: true)
