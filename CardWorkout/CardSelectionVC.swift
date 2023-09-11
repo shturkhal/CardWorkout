@@ -8,19 +8,24 @@
 import UIKit
 
 class CardSelectionVC: UIViewController {
-
     //MARK: Outlets
     
     @IBOutlet var cardImageView: UIImageView!
   // create array of buttons with drag one and create collection, then drag buttons to array
     @IBOutlet var buttons: [UIButton]!
     var timer: Timer!
-    var cards: [UIImage] = []
+    var cards: [UIImage] = Card.allValues
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         startTimer()
         setUpCornerRadiusForButtons()
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer.invalidate()
     }
     //MARK: Functions
     func setUpCornerRadiusForButtons() {
@@ -30,7 +35,7 @@ class CardSelectionVC: UIViewController {
     }
     
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(showRandomImage), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomImage), userInfo: nil, repeats: true)
     }
     
     @objc func showRandomImage() {
@@ -38,15 +43,14 @@ class CardSelectionVC: UIViewController {
         cardImageView.image = cards.randomElement() ?? UIImage(named: "ace_of_spades")
         
     }
-    
     //MARK: Actions
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
+        timer.invalidate()
     }
     
     @IBAction func restartButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func rulesButtonTapped(_ sender: UIButton) {
+        timer.invalidate()
+        startTimer()
     }
 }
